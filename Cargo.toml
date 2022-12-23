@@ -1,0 +1,19 @@
+[package]
+name = "Advent_Of_Code"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+
+[workspace]
+members = [
+    "common"
+    , "aoc-2021"
+    , "aoc-2022"
+]
+
+[[bin]]
+name = "common"
+path = "src/lib.rs"
