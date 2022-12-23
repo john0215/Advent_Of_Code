@@ -14,7 +14,6 @@ impl TuningTrouble {
         let mut signal_chunk = VecDeque::new();
         for (_i, value) in signal.chars().enumerate() {
             signal_chunk.push_back(value);
-            // println!("{:?}", signal_chunk);
             if signal_chunk.len() == self.window_amt {
                 if self.is_unique(signal_chunk.clone()) {
                     self.marker += self.window_amt as i32;
@@ -28,7 +27,6 @@ impl TuningTrouble {
 
     fn is_unique(&mut self, signal_chunk: VecDeque<char>) -> bool {
         let signal_set: HashSet<&char> = HashSet::from_iter(signal_chunk.iter());
-        // println!("{:?}", signal_set);
         signal_set.len() == self.window_amt
     }
 }
