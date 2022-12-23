@@ -24,7 +24,7 @@ struct SupplyStacks {
 } 
 impl SupplyStacks {
     fn parse(&mut self, input: Vec<String>, one_each: bool) {
-        for (_idx, line) in input.iter().enumerate() {
+        for line in input{
             if !line.contains("move"){
                 self.build_cargo_ships(line.clone());
             } else {
